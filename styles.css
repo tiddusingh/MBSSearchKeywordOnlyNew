@@ -1,0 +1,251 @@
+/* Main Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards */
+.card {
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    border-top-left-radius: 0.5rem !important;
+    border-top-right-radius: 0.5rem !important;
+    padding: 0.75rem 1rem;
+}
+
+.bg-info {
+    background-color: #17a2b8 !important;
+}
+
+.bg-purple {
+    background-color: #8e44ad !important;
+}
+
+/* Note specific styles */
+.note-number {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #8e44ad;
+}
+
+.badge.bg-secondary {
+    background-color: #6c757d;
+    font-weight: normal;
+    font-size: 0.85rem;
+    padding: 0.35em 0.65em;
+}
+
+/* Search Input */
+#searchInput:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    border-color: #86b7fe;
+}
+
+/* Filter Styles */
+.filter-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.filter-item {
+    margin-bottom: 0.5rem;
+}
+
+.filter-item label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.filter-item .form-check-input {
+    margin-right: 0.5rem;
+}
+
+.filter-item .count {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: #6c757d;
+    background-color: #e9ecef;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.25rem;
+}
+
+/* Results */
+.result-item {
+    transition: transform 0.2s ease;
+}
+
+.result-item:hover {
+    transform: translateY(-2px);
+}
+
+.result-item .item-number {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.result-item .description {
+    margin: 1rem 0;
+    color: #212529;
+    line-height: 1.5;
+}
+
+.fee-info {
+    background-color: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    border-left: 3px solid #198754;
+    margin-bottom: 1rem;
+}
+
+.fee-label {
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.fee-amount {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #198754;
+}
+
+.navigation-links {
+    font-size: 0.9rem;
+}
+
+.navigation-links a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.navigation-links a:hover {
+    text-decoration: underline;
+}
+
+/* Pagination */
+.pagination .page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.pagination .page-link {
+    color: #0d6efd;
+}
+
+.pagination .page-link:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+}
+
+.item-detail-row {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.item-detail-row:last-child {
+    border-bottom: none;
+}
+
+.item-detail-label {
+    font-weight: 500;
+    color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .col-lg-3 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-md-end {
+        text-align: left !important;
+    }
+    
+    .navigation-links {
+        margin-top: 1rem;
+    }
+    
+    .d-flex.justify-content-between {
+        flex-direction: column;
+    }
+}
+
+/* Highlight search matches */
+.highlight {
+    background-color: rgba(255, 255, 0, 0.3);
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+}
+
+/* Loading spinner */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+/* Selected filters display */
+.selected-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e9ecef;
+    color: #212529;
+    padding: 0.35rem 0.65rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.filter-badge .remove-filter {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.filter-badge .remove-filter:hover {
+    color: #dc3545;
+}
